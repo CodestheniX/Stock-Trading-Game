@@ -1,5 +1,7 @@
 # Börsenspiel (Stock-Trading-Game)
-**Prototyp eines webbasierten Serious Games zur Vermittlung von Grundlagen des Aktienhandels im Rahmen eines Uni-Projekts**
+Ein Prototyp eines Serious Games für das Modul "Web-Technologie" mit dem Thema/Schwerpunkt:  
+_"Entwurf und prototypische Implementierung eines webbasierten Serious-Games zur Vermittlung der Grundlagen des Aktienhandels"_
+
 ![Simulation](Screenshots/Simulation.png)
 
 ## Projektbeschreibung
