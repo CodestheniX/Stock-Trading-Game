@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <title>Simulation</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Albert Dumanov - 561092">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap (css & js) -->
+  <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+  <script src="../lib/js/bootstrap.bundle.min.js"></script>
+  <script src="../lib/js/jquery-3.6.0.min.js"></script>
+  <!-- Eigene (css & js) -->
+  <link rel="stylesheet" href="../css/layout.css">
+  <script src="../js/signup.js"></script>
+  <script src="../js/simulation.js"></script>  
+</head>
+
+<body class="game-body">
+  <form class="container col-12">
+    <div class="row gx-0">
+      <h1 class="mt-3 text-center">Simulation</h1>
+      <hr class="mb-2">
+    </div>
+
+    <div class="row gx-0">
+      <div class="col-12 row gx-0">
+        <a class="btn btn-lg btn-outline-rectangle col-6" id="StartEndSimulation" onclick="StartEndSimulation()">Simulation starten</a>
+        <div id="container-coundown" class="col-6">10:00 Minuten</div>
+      </div>
+    </div>
+
+    <div class="col-12 row mb-2 gx-0">
+      <canvas id="chart-kurs"></canvas>
+    </div>
+
+    <div class="row gx-2">
+      <div class="col-3 col-sm-2 col-md-2 col-lg-1 my-1">
+        <input type="number" class="form-control input-game" placeholder="Anzahl" value="1" id="Anzahl_Kauf" onkeyup="CalculateTotalPrice(true)">
+      </div>
+      <div class="col-4 col-sm-2 col-md-2 col-lg-1 my-2 text-nowrap">
+        <label id="EK_Preis_Einzel">x 109,99 €</label>
+      </div>
+      <div class="col-5 col-sm-3 col-md-2 col-lg-2 col-xl-1 my-2 text-nowrap">
+        <label id="EK_Preis_Gesamt">= 109,99 €</label>
+      </div>
+      <div class="col-12 col-sm-4 col-md-6 col-lg-8 col-xl-4 my-1">
+        <button class="btn btn-md btn-outline-cancel" type="button" id="Aktien_Kaufen" onclick="BuyShares()">Aktien kaufen</button>
+      </div>
+
+      <div class="col-3 col-sm-2 col-md-2 col-lg-1 my-1">
+        <input type="number" class="form-control input-game" placeholder="Anzahl" value="1" id="Anzahl_Verkauf" onkeyup="CalculateTotalPrice(false)">
+      </div>
+      <div class="col-4 col-sm-2 col-md-2 col-lg-1 my-2 text-nowrap">
+        <label id="VK_Preis_Einzel">x 99,99 €</label>
+      </div>
+      <div class="col-5 col-sm-3 col-md-2 col-lg-2 col-xl-1 my-2 text-nowrap">
+        <label id="VK_Preis_Gesamt">= 99,99 €</label>
+      </div>
+      <div class="col-12 col-sm-4 col-md-3 col-lg-8 col-xl-2 my-1">
+        <button class="btn btn-md btn-outline-submit" type="button" id="Aktien_Verkaufen" onclick="SellShares()">Aktien verkaufen</button>
+      </div>
+    </div>
+
+    <div class="row gx-0">
+      <hr class="mt-2 mb-1">
+      <div class="col-sm-12 col-lg-5">
+        <h3>Marktübersicht</h3>
+        <div class="row col my-1 gx-0">
+          <label class="col-6 col-sm-4 col-md-2 col-lg-5 col-xl-3 ueberschrift">Briefkurs: </label>
+          <label class="col-4 col-sm-8 col-md-5 col-lg-5 col-xl-3" id="briefkurs">100,00 €</label>
+
+          <label class="col-6 col-sm-4 col-md-3 col-lg-5 col-xl-3 ueberschrift">Geldkurs: </label>
+          <label class="col-4 col-sm-8 col-md-2 col-lg-5 col-xl-3" id="geldkurs">99,99 €</label>
+
+          <label class="col-6 col-sm-4 col-md-2 col-lg-5 col-xl-3 ueberschrift">Kursänderung: </label>
+          <label class="col-4 col-sm-8 col-md-9 col-lg-5 col-xl-7" id="kursaenderung">- €</label>
+
+          <label class="col-6 col-sm-4 col-md-2 col-lg-5 col-xl-3 ueberschrift">Gebühren: </label>
+          <label class="col-4 col-sm-8 col-md-9 col-lg-7 col-xl-7"> 0,25 % des Orderwertes zzgl. 4,95 €</label>
+        </div>
+        <div class="col-md gx-0">
+          <canvas id="chart-marktsituation"></canvas>
+        </div>
+      </div>
+
+      <div class="col-lg-2"></div>
+
+      <div class="col-sm-12 col-lg-5">
+        <h3>Benutzer-Information</h3>
+        <div class="row col my-1 gx-0">
+          <label class="col-6 col-sm-4 col-md-2 col-lg-5 col-xl-3 ueberschrift">Kontostand: </label>
+          <label class="col-4 col-sm-8 col-md-5 col-lg-5 col-xl-3" id="kontostand">50.000,00 €</label>
+
+          <label class="col-6 col-sm-4 col-md-2 col-lg-5 col-xl-4 ueberschrift">Gewinn / Verlust: </label>
+          <label class="col-4 col-sm-8 col-md-2 col-lg-5 col-xl-2" id="ergebnis">0 €</label>
+
+          <label class="col-6 col-sm-4 col-md-2 col-lg-5 col-xl-3 ueberschrift">Depotbestand: </label>
+          <label class="col-4 col-sm-8 col-md-9 col-lg-7 col-xl-9 text-nowrap" id="aktien_depot">0 Aktien</label>
+
+          <label class="col-6 col-sm-4 col-md-2 col-lg-5 col-xl-3 ueberschrift">Erworben: </label>
+          <label class="col-4 col-sm-8 col-md-5 col-lg-5 col-xl-3 text-nowrap" id="aktien_gekauft">0 Aktien</label>
+
+          <label class="col-6 col-sm-4 col-md-2 col-lg-5 col-xl-4 ueberschrift">Verkauft: </label>
+          <label class="col-4 col-sm-8 col-md-2 col-lg-5 col-xl-2 text-nowrap" id="aktien_verkauft">0 Aktien</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Das Feature "Orderbuch" entstand auf Basis eines Erfahrungsaustausch mit dem Kommilitonen Konstantinos Gaganis, welcher dieses Feature bereits implementiert hatte -->
+    <div class="row gx-0">
+      <hr class="mt-2 mb-1">
+      <h3>Orderbuch</h3>
+      <div class="row col-12 table-responsive"  id="orderbuch">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Art</th>
+              <th>Aktien</th>
+              <th>Kurs</th>
+              <th>Gebühren</th>
+              <th>Umsatz</th>
+              <th>Zeit</th>              
+            </tr>
+          </thead>
+          <tbody id="Orderbuch_Eintraege">
+            <!-- Für die späteren Einträge -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </form>
+</body>
+
+</html>

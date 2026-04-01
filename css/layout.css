@@ -1,0 +1,191 @@
+/* -- Anpassungen -- */
+body
+{
+  margin: auto;
+  max-width: 600px;
+  padding: 10px;
+  color: rgb(228, 133, 38);
+  background-color: #212122;
+ }
+
+.table
+{
+  color: rgb(228, 133, 38);
+  border-color: rgb(228, 133, 38);
+}
+
+/* -- Eigene Klassen --  */
+.game-body
+{
+  max-width: 1280px;
+}
+
+.input-game
+{
+  min-width: 50px;
+  text-align: right;
+}
+
+.ueberschrift
+{
+  font-weight: bold;
+}
+
+.td-text
+{
+  text-align: left;
+  min-width: 50px;
+}
+
+.td-numeric
+{
+  text-align: right;
+  min-width: 110px;
+}
+
+.tr-buy
+{  
+  color: #a3160c;
+}
+
+.tr-sell
+{
+  color:#0d9708;
+}
+
+/* -- Selektoren -- */
+#chart-kurs
+{
+  background-color: #ebebeb0a;
+  border-style: solid;
+  border-width: thin;
+  max-height: 400px;  
+}
+
+#chart-marktsituation
+{
+  background-color: #ebebeb0a;
+  border-style: solid;
+  border-width: thin;
+  max-height: 50px;
+  width: 100%;  
+}
+
+#container-coundown
+{
+  background-color: #ebebeb0a;
+  border-style: solid;
+  border-width: thin;
+  font-size: min(4vw, 26px);
+  text-align: center;  
+  padding: 10px;  
+}
+
+#orderbuch
+{
+  display: none;
+}
+
+#Error_Message
+{
+  color: rgb(219, 66, 66);
+  font-size: 90%;
+}
+
+/* -- Buttons (Outline) -- */
+.btn-outline-standard-small
+{ 
+  color: rgb(228, 133, 38);
+  border-color: rgb(228, 133, 38);
+  border-radius: 15px;  
+}
+
+.btn-outline-standard
+{ 
+  color: rgb(228, 133, 38);
+  border-color: rgb(228, 133, 38);
+  border-radius: 15px;
+  min-width: 150px;
+}
+
+.btn-outline-rectangle
+{ 
+  color: rgb(228, 133, 38);
+  border-color: rgb(228, 133, 38);
+  background-color: #ebebeb0a;
+  border-radius: 0px;
+  font-size: min(4vw, 26px);
+  padding: 10px;
+}
+
+.btn-outline-rectangle:hover
+{ 
+  color: black;
+  background-color: rgb(228, 133, 38);
+  font-weight: bold;
+}
+
+.btn-outline-standard:hover, .btn-outline-standard-small:hover
+{ 
+  color: black;
+  border-color: black; 
+  border-radius: 20px;
+  background-color: rgb(228, 133, 38);
+  font-weight: bold;
+}
+
+.btn-outline-cancel
+{ 
+  color: rgb(228, 133, 38);
+  border-radius: 15px;
+  border-color: rgb(228, 133, 38);
+  min-width: 150px;
+}
+
+.btn-outline-cancel:hover
+{ 
+  color: black;
+  border-color: black; 
+  border-radius: 20px;
+  background-color: rgb(168, 43, 26);
+  font-weight: bold;  
+}
+
+.btn-outline-submit
+{ 
+  color: rgb(228, 133, 38);
+  border-radius: 15px;
+  border-color: rgb(228, 133, 38);
+  min-width: 150px;
+}
+
+.btn-outline-submit:hover
+{ 
+  color: black;
+  border-color: black; 
+  border-radius: 20px;
+  background-color: rgb(38, 163, 13);
+  font-weight: bold;
+}
+
+/* -- Links -- */
+/* Angeklickte, nicht angeklickte & selektierte Links */
+a:link, a:visited, a:active
+{
+  color: rgb(228, 133, 38);
+}
+/* Mouse-Over */
+a:hover
+{
+  color: rgb(241, 181, 121);
+}
+
+/* -- Kein eigener Code! -- */
+/* Quelle: https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp 
+   Aufgerufen am: 15.07.2021
+*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

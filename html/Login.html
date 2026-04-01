@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <title>Anmeldung</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Albert Dumanov - 561092">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap (css & js) & JQuery -->
+  <link rel="stylesheet" href="../lib/css/bootstrap.min.css">
+  <script src="../lib/js/bootstrap.bundle.min.js"></script>
+  <script src="../lib/js/jquery-3.6.0.min.js"></script>
+  <!-- Eigene (css & js) -->
+  <link rel="stylesheet" href="../css/layout.css">
+  <script src="../js/signup.js"></script>  
+</head>
+
+<body class="login_Page">
+  <form id="Login" class="container col-12">
+    <div class="row">
+      <!-- Bild-Quelle: https://www.flaticon.com/free-icon/financial-profit_4256863?related_id=4256900&origin=search# Aufgerufen am: 14.07.2021 -->
+      <img class="col-6 col-sm-4 col-md-3 mt-4 img-fluid mx-auto" src="../img/Logo.png" alt="" width="75" height="75">
+      <h1 class="mt-3 text-center">Anmeldung</h1>
+      <hr class="mb-1">
+
+      <div class="gx-0">
+        <label for="Benutzer">Benutzername</label>
+        <input type="text" id="Benutzer_Login" class="form-control" placeholder="Benutzername" required autofocus>
+      </div>
+
+      <div class="gx-0">
+        <label for="Passwort" class="mt-2">Passwort</label>
+        <input type="password" id="Passwort_Login" class="form-control" placeholder="Passwort" required>
+      </div>
+
+      <label class="mt-2 mb-2 gx-0">
+        <input type="checkbox" class="form-check-input" checked>Angemeldet bleiben
+      </label>
+
+      <a class="btn btn-lg btn-outline-standard" onclick="ValidateInputs('Login')">Anmelden</a>
+      <label class="text-center mt-2">Noch nicht registriert ?
+        <a href="register.html">Registrieren</a>
+      </label>
+    </div>
+  </form>  
+</body>
+
+</html>
