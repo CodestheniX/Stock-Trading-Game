@@ -1,6 +1,6 @@
 # Börsenspiel (Stock-Trading-Game)
-
-Prototyp eines webbasierten Serious Games zur Vermittlung von Grundlagen des Aktienhandels im Rahmen eines Uni-Projekts.
+**Prototyp eines webbasierten Serious Games zur Vermittlung von Grundlagen des Aktienhandels im Rahmen eines Uni-Projekts**
+![Simulation](Screenshots/Simulation.png)
 
 ## Projektbeschreibung
 
@@ -70,3 +70,7 @@ Das Börsenspiel soll einen niedrigschwelligen Einstieg in den Aktienhandel erm�
 - Einfluss von Kursänderungen auf den Depotwert
 - Bedeutung von Transaktionskosten
 - Zusammenhang zwischen Marktbewegung und Handelsergebnis
+
+## Hinweis zur Dokumentation
+Diese Dokumentation wurde teilweise mit Unterstützung von ChatGPT erstellt.  
+Die Inhalte wurden anschließend geprüft, angepasst und an das Projekt angeglichen.
