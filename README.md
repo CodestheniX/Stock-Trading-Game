@@ -72,5 +72,5 @@ Das Börsenspiel soll einen niedrigschwelligen Einstieg in den Aktienhandel erm�
 - Zusammenhang zwischen Marktbewegung und Handelsergebnis
 
 ## Hinweis zur Dokumentation
-Diese Dokumentation wurde teilweise mit Unterstützung von ChatGPT erstellt.  
+Diese Dokumentation wurde mit Unterstützung von ChatGPT erstellt.  
 Die Inhalte wurden anschließend geprüft, angepasst und an das Projekt angeglichen.
