@@ -1,12 +1,17 @@
 # Börsenspiel (Stock-Trading-Game)
-Ein Prototyp eines Serious Games für das Modul "Web-Technologie" mit dem Thema/Schwerpunkt:  
-_"Entwurf und prototypische Implementierung eines webbasierten Serious-Games zur Vermittlung der Grundlagen des Aktienhandels"_
+Interaktiver Frontend-Prototyp eines Serious Games zur spielerischen Vermittlung von Aktienhandel-Grundlagen für das "Web-Technologie".  
+<p align="center">
+  <a href="https://CodestheniX.github.io/Stock-Trading-Game/">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-Launch-014d2b?style=for-the-badge&logo=github&logoColor=white" alt="Live Demo"/>
+  </a>
+</p>
 
 ![Simulation](Screenshots/Simulation.png)
 
 ## Projektbeschreibung
 
-Dieses Projekt ist ein interaktiver Frontend-Prototyp, der grundlegende Abläufe des Aktienhandels spielerisch vermittelt. Nutzerinnen und Nutzer durchlaufen zunächst eine Login- bzw. Registrierungsoberfläche und gelangen anschließend in eine Börsensimulation, in der Aktien innerhalb eines begrenzten Zeitraums gekauft und verkauft werden können.
+Dieses Projekt ist ein interaktiver Frontend-Prototyp, der grundlegende Abläufe des Aktienhandels spielerisch vermittelt.  
+Nutzerinnen und Nutzer durchlaufen zunächst eine Login- bzw. Registrierungsoberfläche und gelangen anschließend in eine Börsensimulation, in der Aktien innerhalb eines begrenzten Zeitraums gekauft und verkauft werden können.
 
 Ziel des Projekts ist es, zentrale Konzepte wie Kursentwicklung, Gebühren, Depotbestand sowie Gewinn und Verlust anschaulich und praxisnah erfahrbar zu machen.
 
@@ -74,5 +79,5 @@ Das Börsenspiel soll einen niedrigschwelligen Einstieg in den Aktienhandel erm�
 - Zusammenhang zwischen Marktbewegung und Handelsergebnis
 
 ## Hinweis zur Dokumentation
-Diese Dokumentation wurde mit Unterstützung von ChatGPT erstellt.  
+Diese README wurde mit Unterstützung von ChatGPT erstellt.  
 Die Inhalte wurden anschließend geprüft, angepasst und an das Projekt angeglichen.
